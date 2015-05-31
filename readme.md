@@ -111,6 +111,49 @@ Templating without live reload is really painfully. But don't worry, Stater have
 
 Yes, our job is delivering static HTML template. So don't worry about the server since we only use the server (or really needs the server) for development purpose (to get speed while working). Anytime we need to publish our work (whether finished or not), simply run **`./stater.js build`** and YIHHAA!! Our template compiled to **`build`** folder. All pages and assets will be there, and all pages will exact same with what we get on browser (direct render), since model and views automatically controlled.
 
+## Installation
+
+Before installing Stater, we need to ensure our machine already have NodeJS, Bower, Forever and Sails Blueprint Generator.
+
+**Install Bower**
+
+```bash
+$ npm install -g bower
+```
+
+**Install Forever**
+
+```bash
+$ npm install -g forever
+```
+
+**Install Sails Blueprint Generator**
+
+```bash
+$ npm install -g sails-blueprint-generate
+```
+
+**Installing Stater**
+
+```bash
+$ sailsgen project-name
+```
+
+and fill then informations asked by **`sailsgen`**.
+
+After installing Stater, you can start the server by:
+
+```bash
+$ cd project-name
+$ ./stater.js start --verbose
+```
+
+After server started, you can try to visit your server by opening browser from terminal or directly from browser. Example:
+
+```bash
+$ open http://localhost:8042
+```
+
 
 
 ***
