@@ -82,7 +82,7 @@ module.exports = {
 
 When we visiting **`http://localhost/home`**, Stater serve homepage and the browser title will be **`Home Page Sampe`**, taken from **`model/home.js`**.
 
-When we visiting **`http://localhost/about`**, Stater serve homepage and the browser title will be **`About Page Sampe`**, taken from **`model/about.js`**. And the meta description also changed (only for about page) since on **`about.js`** we have title and description.
+When we visiting **`http://localhost/about`**, Stater serve about and the browser title will be **`About Page Sampe`**, taken from **`model/about.js`**. And the meta description also changed (only for about page) since on **`about.js`** have title and description.
 
 
 ## **Features**
@@ -112,6 +112,9 @@ Templating without live reload is really painfully. But don't worry, Stater have
 Yes, our job is delivering static HTML template. So don't worry about the server since we only use the server (or really needs the server) for development purpose (to get speed while working). Anytime we need to publish our work (whether finished or not), simply run **`./stater.js build`** and YIHHAA!! Our template compiled to **`build`** folder. All pages and assets will be there, and all pages will exact same with what we get on browser (direct render), since model and views automatically controlled.
 
 
+
+***
+**Documentation is not yet finished**
 
 
 
