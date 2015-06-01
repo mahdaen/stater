@@ -1,6 +1,6 @@
 {
-  "name": "stater",
-  "version": "1.1.0",
+  "name": "stater-swig",
+  "version": "1.1.1",
   "description": "Stater is a HTML Template Blueprint including static web server based on node js. Stater help front-end developer to develop their template without headache.",
   "main": "stater.js",
   "dependencies": {
