@@ -108,7 +108,7 @@ configs.router.forEach(function (route) {
 sitemap = sitemap.replace('<!-- URLS -->', siteurl);
 configs.sitemapurl = sitemap;
 
-file.writeFileSync('./sitemap.xml', sitemap);
+file.writeFileSync('./public/sitemap.xml', sitemap);
 
 /* Registering Custom Menus */
 var cmenus = require('./menu');
@@ -118,16 +118,19 @@ Object.keys(cmenus).forEach(function (name) {
 
 /* Generating Robots.txt */
 var robots = require('./robots');
-var robotx = 'User-Agent: ' + robots.userAgent + '\r\n';
+var robotx = '';
 
-robots.disallow.forEach(function (dsl) {
-    robotx += 'Disallow: ' + dsl + '\r\n';
+robots.forEach(function (rob) {
+    robotx += 'User-Agent: ' + rob.userAgent + '\r\n';
+    rob.disallow.forEach(function (dsl) {
+        robotx += 'Disallow: ' + dsl + '\r\n';
+    });
 });
 
 robotx += 'Sitemap: ' + configs.htpr + '://' + configs.host + '/sitemap.xml';
 configs.robots = robotx;
 
-file.writeFileSync('./Robots.txt', robotx);
+file.writeFileSync('./public/robots.txt', robotx);
 
 /* Collecting Models */
 var models = find.sync('model/**/*.js');

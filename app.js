@@ -86,19 +86,11 @@ if ( initStater ) {
         var hostname = req.headers.host.split(":")[ 0 ];
 
         config.logs.info('Initializing request ' + config.htpr + '://' + hostname + ':' + config.port + req.path);
-        /* Dissalow requesting from wrong host */
-        if ( config.env === 'production' ) {
-            if ( hostname !== config.host ) {
-                /* Redirect IP Address */
-                if ( hostname.match(/(?:[0-9]{1,3}\.){3}[0-9]{1,3}/) ) {
-                    res.redirect(config.htpr + '://' + config.host);
-                }
-                else {
-                    var err = new Error('Forbidden. Not allowed to request from different host.');
 
-                    err.status = 403;
-                    next(err);
-                }
+        /* Redirect to original host if requested with different host */
+        if ( config.env && cliArg.indexOf('--noredir') < 0 ) {
+            if ( hostname !== config.host ) {
+                res.redirect(config.htpr + '://' + config.host);
             }
             else {
                 next();
