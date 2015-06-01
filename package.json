@@ -1,10 +1,11 @@
 {
   "name": "stater",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Stater is a HTML Template Blueprint including static web server based on node js. Stater help front-end developer to develop their template without headache.",
   "main": "stater.js",
   "dependencies": {
     "colors": "^1.1.0",
+    "compression": "^1.4.4",
     "express": "^4.12.4",
     "fs-extra": "^0.18.4",
     "glob": "^5.0.10",
