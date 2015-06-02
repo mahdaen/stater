@@ -7,7 +7,7 @@ var metas = {
     /* Basic Metas */
     title       : 'Free HTML Template Built In NodeJS Server',
     subtitle    : 'Stater',
-    keyword     : 'static, html, server, nodejs, html template, nodejs template, nodejs blueprint, template blueprint, html bootstrap, nodejs bootstrap',
+    keyword     : 'static, html, server, nodejs, html template, nodejs template, nodejs blueprint, template blueprint, html bootstrap, nodejs bootstrap, develop template, front-end developer',
     description : 'Stater is a HTML Template Blueprint including static web server based on node js. Stater help front-end developer to develop their template without headache.',
 
     author         : 'Stater',
