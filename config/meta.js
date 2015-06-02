@@ -29,16 +29,6 @@ var metas = {
     customs : [
         [
             {
-                atrib : 'http-equiv',
-                value : 'Cache-control'
-            },
-            {
-                atrib : 'content',
-                value : 'public'
-            }
-        ],
-        [
-            {
                 atrib : 'name',
                 value : 'Copyright'
             },
