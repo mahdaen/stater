@@ -30,7 +30,7 @@ var metas = {
         [
             {
                 atrib : 'http-equiv',
-                value : 'cache-control'
+                value : 'Cache-control'
             },
             {
                 atrib : 'content',
