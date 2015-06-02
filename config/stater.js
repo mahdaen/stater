@@ -41,7 +41,7 @@ var configs = {
     }
 };
 
-/* Getting Runtime Arguments */
+/* Getting Runtime Flags */
 var cliArg = process.argv;
 var debugs = configs.debug = (cliArg.indexOf('--debug') > -1 ? true : false);
 
@@ -60,7 +60,7 @@ if ( cliArg.indexOf('--https') > -1 ) {
     configs.htpr = 'https';
 }
 
-/* Change Environtment by runtime flags */
+/* Change Caching Controll by runtime flags */
 if ( cliArg.indexOf('--nocache') > -1 ) {
     configs.cached = false;
 }
