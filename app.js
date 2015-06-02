@@ -143,7 +143,7 @@ if ( initStater ) {
                 else {
                     /* Enable Caching on production */
                     if ( config.env === 'production' && config.cached ) {
-                        res.setRequestHeader('Cache-Control', 'public, max-age=60000');
+                        res.header('Cache-Control', 'public, max-age=60000');
                     }
 
                     res.send(html);
