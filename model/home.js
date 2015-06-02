@@ -5,6 +5,6 @@
 /* Exporting Homepage Data */
 module.exports = {
     title: 'Free HTML Template built in NodeJS Server',
-    welcome: 'Hello! Your ship is delivering your Static HTML through the sea.',
-    extras: 'Thanks for using <strong>Stater</strong> as your ship. Enjoy!',
+    welcome: 'Hello! Your ship is delivering your <strong>Static HTML</strong> through the sea.',
+    extras: 'Thanks for using <b>Stater</b> as your ship. Enjoy!',
 }
