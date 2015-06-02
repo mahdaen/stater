@@ -25,9 +25,10 @@ var configs = {
     router : require('./router'),
     filter : require('./filters'),
 
-    model : {},
-    menus : {},
-    env   : process.ENV || 'development',
+    model  : {},
+    menus  : {},
+    env    : process.ENV || 'development',
+    cached : true,
 
     htpr : 'http',
     port : 8090,
@@ -57,6 +58,11 @@ if ( cliArg.indexOf('--prod') > -1 ) {
 /* Change Environtment by runtime flags */
 if ( cliArg.indexOf('--https') > -1 ) {
     configs.htpr = 'https';
+}
+
+/* Change Environtment by runtime flags */
+if ( cliArg.indexOf('--nocache') > -1 ) {
+    configs.cached = false;
 }
 
 /* Change port by runtime flags */
