@@ -24,7 +24,9 @@ Object.keys(config).forEach(function (title) {
 });
 
 /* Configuring Swig */
-swig.setDefaults({ cache : false });
+if ( config.env === 'production' && config.cached ) {
+    swig.setDefaults({ cache : false });
+}
 
 /* Adding Filters to Swig */
 Object.keys(config.filter).forEach(function (filter) {
@@ -72,7 +74,7 @@ if ( initStater ) {
     }
 
     /* Serve server from "build" folder on production, and use router on development */
-    if ( appData.env === 'production' ) {
+    if ( appData.env === 'production' && config.cached ) {
         /* Serving Static Files */
         app.use(express.static('build', { etag : true, maxAge : 604800000 }));
     }
@@ -139,6 +141,11 @@ if ( initStater ) {
                     });
                 }
                 else {
+                    /* Enable Caching on production */
+                    if ( config.env === 'production' && config.cached ) {
+                        res.setHeader('Cache-Control', 'public, max-age=60000');
+                    }
+
                     res.send(html);
 
                     config.logs.res(res);
