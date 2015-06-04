@@ -27,7 +27,7 @@ Object.keys(config).forEach(function (title) {
 swig.setDefaults({ cache : false });
 
 if ( config.env === 'production' && config.cached ) {
-    swig.setDefaults({ cache : true });
+    swig.setDefaults({ cache : 'memory' });
 }
 
 /* Adding Filters to Swig */
