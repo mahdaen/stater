@@ -8,19 +8,16 @@
 
 {# CONTENT INJECTION #}
 {% block content -%}
-    <section class="center">
-        <div id="logo" class="logo">
-            <img src="{{ ROOT }}images/logo.png" alt="Stater"/>
+    <section id="content" class="center rel">
+        <div class="markdown">
+            {{ plugin.md('about/markdown', true) }}
         </div>
-        <header>
-            <h1>Stater About Page</h1>
-            <h2>{{ raws( model.about.stater.message ) }}</h2>
-        </header>
     </section>
 {%- endblock %}
 
 {# FOOTER INJECTION #}
 {% block footer -%}
-    {% set footclass = '' %}
+    {% set footclass = 'rel' %}
+
     {% include '../parts/footer.html' -%}
 {%- endblock %}
