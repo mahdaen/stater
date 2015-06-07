@@ -1,4 +1,6 @@
-# **Stater - HTML Template with NodeJS Server**
+# **Stater - Smart HTML Blueprint**
+
+![Stater](http://stater.mahdaen.name/icons/mstile-310x310.png "Stater")
 
 Stater is a HTML Template Blueprint including static web server based on node js. Stater help front-end developer to develop their template without headache.
 
@@ -89,7 +91,7 @@ When we visiting **`http://localhost/about`**, Stater serve about and the browse
 
 ### **NodeJS Server**
 
-Stater is nodejs based app. So we don't need to run our template on Apache, Nginx etc with setting up host before we use it. We can do many things with our template since the template is the server itself. We can start or stop it at anytime we need. Stater also comes with CLI support. So to start the server we can just run **`./stater.js start`**.
+Stater is nodejs based app. So we don't need to run our template on Apache, Nginx etc with setting up host before we use it. We can do many things with our template since the template is the server itself. We can start or stop it at anytime we need. Stater also comes with CLI support. So to start the server we can just run **`./stater start`**.
 
 ### **Automatic Routing**
 
@@ -109,7 +111,12 @@ Templating without live reload is really painfully. But don't worry, Stater have
 
 ### **Publish**
 
-Yes, our job is delivering static HTML template. So don't worry about the server since we only use the server (or really needs the server) for development purpose (to get speed while working). Anytime we need to publish our work (whether finished or not), simply run **`./stater.js build`** and YIHHAA!! Our template compiled to **`build`** folder. All pages and assets will be there, and all pages will exact same with what we get on browser (direct render), since model and views automatically controlled.
+Yes, our job is delivering static HTML template. So don't worry about the server since we only use the server (or really needs the server) for development purpose (to get speed while working). Anytime we need to publish our work (whether finished or not), simply run **`./stater build`** and YIHHAA!! Our template compiled to **`build`** folder. All pages and assets will be there, and all pages will exact same with what we get on browser (direct render), since model and views automatically controlled.
+
+***
+### **Watch the Video**
+
+[![Stater](http://img.youtube.com/vi/PZiNx5zI6cg/0.jpg)](http://www.youtube.com/watch?v=PZiNx5zI6cg)
 
 ## Installation
 
@@ -141,11 +148,13 @@ $ sailsgen project-name
 
 and fill then informations asked by **`sailsgen`**.
 
+You can also clone this repo to get started with Stater.
+
 After installing Stater, you can start the server by:
 
 ```bash
 $ cd project-name
-$ ./stater.js start --verbose
+$ ./stater develop --verbose
 ```
 
 After server started, you can try to visit your server by opening browser from terminal or directly from browser. Example:
@@ -154,12 +163,12 @@ After server started, you can try to visit your server by opening browser from t
 $ open http://localhost:8042
 ```
 
+To show the available commands, type:
 
+```bash
+$ ./stater help
+```
 
 ***
 **Documentation is not yet finished**
-
-
-
-
 
