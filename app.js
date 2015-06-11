@@ -317,7 +317,7 @@ if ( initStater ) {
         setTimeout(function () {
             config.logs.info('Triggering reload on start...');
             load.reload();
-        }, 200);
+        }, 300);
     }
 }
 
